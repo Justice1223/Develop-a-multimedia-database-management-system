@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.4">
+  <diagram name="MultimediaDB_ERD" id="X0a1vVjKvAh9Qe2UZYvl">
+    <mxGraphModel dx="1426" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="content" value="Content\nContentID (PK)\nTitle\nDescription\nReleaseDate\nDuration\nLanguage" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="40" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="director" value="Director\nDirectorID (PK)\nName\nBio" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="70" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_content_director" style="endArrow=block;html=1;" parent="1" source="content" target="director" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Actor\nActorID (PK)\nName\nBio" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="330" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="content_cast" value="Content_Cast\nContentID (FK)\nActorID (FK)" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="330" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_content_cast_1" style="endArrow=block;html=1;" parent="1" source="content" target="content_cast" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_content_cast_2" style="endArrow=block;html=1;" parent="1" source="actor" target="content_cast" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="User\nUserID (PK)\nUsername\nEmail\nPassword\nRegistrationDate" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="50" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="subscription" value="Subscription_Plan\nPlanID (PK)\nPlanName\nPrice\nDuration" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="50" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="user_sub" value="User_Subscription\nUserID (FK)\nPlanID (FK)\nStartDate\nEndDate" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_sub_1" style="endArrow=block;html=1;" parent="1" source="user" target="user_sub" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel_user_sub_2" style="endArrow=block;html=1;" parent="1" source="subscription" target="user_sub" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
