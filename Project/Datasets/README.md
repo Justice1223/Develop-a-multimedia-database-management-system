@@ -7,3 +7,5 @@ Provided by the instructor:
 Upon submission, this directory contains the following script:
 
 - `ReadData.*`: A script (with an appropriate extension based on your chosen programming language) used to clean and load data from `data.csv` into the database.
+
+- Run pip install mysql-connector-python in your terminal if You can't run Readdata.py
