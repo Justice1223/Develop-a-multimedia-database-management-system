@@ -12,7 +12,7 @@ README files found in this repository.**
 
 | Team Member | Student Name           | Email Address               | Role                    |
 |-------------|------------------------|-----------------------------|-------------------------|
-| 1           |Carter Yang             |Jyang39@sfsu.edu             | Team Lead               |
+| 1           |Jiabao Yang             |Jyang39@sfsu.edu             | Team Lead               |
 | 2           |                        |                             | Database Architect      |
 | 3           |                        |                             | Database Developer      |
 | 4           |                        |                             | Database Analyst/Tester |
