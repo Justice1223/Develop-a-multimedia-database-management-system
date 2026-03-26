@@ -1,6 +1,3 @@
-# Required Scripts
-
-Provided by the instructor:
 
 - `Data.csv`: The sample dataset (provided by the instructor) that should be cleaned and used to populate the database tables.
 
